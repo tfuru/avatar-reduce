@@ -45,7 +45,7 @@ gcloud app deploy --project=avatar-reduce
 gcloud app browse --project=avatar-reduce
 ```
 
-# ライブラリ
+# 利用ライブラリ
 [VReducer](https://github.com/nkjzm/VReducer)
 - 
 
