@@ -45,9 +45,10 @@ gcloud app logs tail -s default --project=avatar-reduce
 ```
 
 # 利用ライブラリ
-[VReducer](https://github.com/nkjzm/VReducer) 
+[VReducer](https://github.com/nkjzm/VReducer)
+[VReducer-VroidMobile対応](https://github.com/tfuru/VReducer) 
 
 # 参考 サイト
-[DockerのイメージをGAE/FEにデプロイする][https://qiita.com/wasnot/items/b8691bb4940e6f4a9c24]
+[DockerのイメージをGAE/FEにデプロイする](https://qiita.com/wasnot/items/b8691bb4940e6f4a9c24)
 
 [vrm-specification](https://github.com/vrm-c/vrm-specification)
