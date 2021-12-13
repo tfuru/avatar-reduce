@@ -3,77 +3,136 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>avatar-reduce - VRoidMobile VRMを cluster 向けに変換</title>
+        <title>avatar-reduce - VRoidMobile VRMを cluster 向けに変換 #avatar_reduce</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="/static/index.css">
     </head>
     <body>
         <section class="section">
             <div class="container">
-                <img src="/static/icon.png">
-                <p><a href="https://vroid.com/mobile">VRoidMobile</a> で作られたVRMを <a href="https://cluster.mu/">cluster</a> 用に変換する非公式Webアプリです</p>
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <img src="/static/icon.png" class="logo-image">
+                        <p><a href="https://vroid.com/mobile">VRoidMobile</a> 1.15.1 で作られたVRMを <a href="https://cluster.mu/">cluster</a> 用に変換する非公式Webアプリです</p>        
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section">
             <div class="container">
-                <h2>利用方法</h2>
-                <p>スマートフォンだけで変換できる手順となっています。PCでも利用することができます。</p>
-                <ol>
-                    <li><a href="https://vroid.com/mobile">VRoidMobile</a> でアバターを作成してVRoidHubへアップロードする</li>
-                    <li><a href="https://hub.vroid.com/">VRoidHub</a> へアクセスしてアップロードしたアバターの VRMをダウンロードする</li>
-                    <li>このサイト [VRMファイルを選択] を押してVRMを選択する</li>
-                    <li>[変換] ボタンを押す</li>
-                    <li>しばらく待つと 変換後の cluster 対応 VRMがダウンロードされる</li>
-                    <li><a href="https://cluster.mu/account/avatar">cluster</a> サイトのアバター画面から cluster 対応 VRM をアップロードする。</li>
-                </ol>
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <form action="/api/upload" method="post" enctype="multipart/form-data">
+                            <div class="file">
+                                <label class="file-label">
+                                    <input class="file-input" type="file" name="vrm">
+                                    <span class="file-cta">
+                                        <span class="file-icon">
+                                        <i class="fas fa-upload"></i>
+                                        </span>
+                                        <span class="file-label">VRMファイルを選択</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="buttons">
+                                <input class="button" type="submit" value="変換">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <p><a href="https://www.amazon.jp/hz/wishlist/ls/1U1BNCYHORFTC?ref_=wl_share">Amazonギフト券 500円を送る</a></p>
+                        <p>モチベーション維持,サーバ維持費になるのでお待ちしてます</p>        
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true">Tweet</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>     
+                    </div>
+                </div>                
             </div>
         </section>        
         <section class="section">
             <div class="container">
-                <form action="/api/upload" method="post" enctype="multipart/form-data">
-                    <div class="file">
-                        <label class="file-label">
-                            <input class="file-input" type="file" name="vrm">
-                            <span class="file-cta">
-                                <span class="file-icon">
-                                <i class="fas fa-upload"></i>
-                                </span>
-                                <span class="file-label">VRMファイルを選択</span>
-                            </span>
-                        </label>
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <h2>利用方法</h2>
+                        <p>スマートフォンだけで変換できる手順となっています。PCでも利用することができます。</p>
+                        <ol>
+                            <li><a href="https://vroid.com/mobile">VRoidMobile</a> でアバターを作成してVRoidHubへアップロードする</li>
+                            <li><a href="https://hub.vroid.com/">VRoidHub</a> へアクセスしてアップロードしたアバターの VRMをダウンロードする</li>
+                            <li>このサイト [VRMファイルを選択] を押してVRMを選択する</li>
+                            <li>[変換] ボタンを押す</li>
+                            <li>しばらく待つと 変換後の cluster 対応 VRMがダウンロードされる</li>
+                            <li><a href="https://cluster.mu/account/avatar">cluster</a> サイトのアバター画面から cluster 対応 VRM をアップロードする。</li>
+                        </ol>
                     </div>
-                    <div class="buttons">
-                        <input class="button" type="submit" value="変換">
+                </div>
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <h3>備考</h3>
+                        <ol>
+                            <li>アップロードされたVRMファイルは一時ファイルとして扱われ、<br />定期的に削除されるので流用される等の危険性は少ない仕様となっています</li>
+                            <li>内部で利用している VReducer は VRoidMobile 向けの変更を入れたバージョンです</li>
+                        </ol>
                     </div>
-                </form>
-            </div>
-        </section>
-        <section class="section">
-            <div class="container">
-                <h2>備考</h2>
-                <p>不具合等</p>
-                <ol>
-                    <li>2021-12-13 髪型が崩れる / マテリアル数オーバーとなる場合がある</li>
-                </ol>
+                </div>                  
             </div>
         </section>        
         <section class="section">
             <div class="container">
-                <h2>利用ライブラリ</h2>
-                <ol>
-                    <li>
-                        <p><a href="https://github.com/nkjzm/VReducer">nkjzm/VReducer</a></p>
-                        <p>VRoidStudioでエクスポートされたモデルをClusterアバター用に軽量化する非公式スクリプト</p>
-                    </li>
-                    <li>
-                        <p><a href="https://github.com/tfuru/VReducer">tfuru/VReducer</a></p>
-                        <p>VReducer を VRoidMobile 対応にカスタマイズしたもの</p>
-                    </li>
-                    <li>
-                        <p><a href="https://github.com/tfuru/avatar-reduce/tree/master">tfuru/avatar-reduce</a></p>
-                        <p>このサイトのソースコード等一式</p>
-                    </li>                                       
-                </ol>
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <h2>不具合等</h2>
+                        <ol>
+                            <li>2021-12-13 髪型が崩れる / マテリアル数オーバーとなる場合がある</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <h2>利用ライブラリ</h2>
+                        <ol>
+                            <li>
+                                <p><a href="https://github.com/nkjzm/VReducer">nkjzm/VReducer</a></p>
+                                <p>VRoidStudioでエクスポートされたモデルをClusterアバター用に軽量化する非公式スクリプト</p>
+                            </li>
+                            <li>
+                                <p><a href="https://github.com/tfuru/VReducer">tfuru/VReducer</a></p>
+                                <p>VReducer を VRoidMobile 対応にカスタマイズしたもの</p>
+                            </li>
+                            <li>
+                                <p><a href="https://github.com/tfuru/avatar-reduce/tree/master">tfuru/avatar-reduce</a></p>
+                                <p>このサイトのソースコード等一式</p>
+                            </li>                                       
+                        </ol>        
+                    </div>
+                </div>
             </div>
         </section>
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <h2>問い合わせ</h2>
+                        <ol>
+                            <li>
+                                <p><a href="https://twitter.com/t_furu">@t_furu</a></p>
+                                <p>Twitter で リプライ貰えれば返事します。</p>
+                            </li>
+                            <li>
+                                <p><a href="https://www.amazon.jp/hz/wishlist/ls/1U1BNCYHORFTC?ref_=wl_share">ほしいものリスト</a></p>
+                            </li>
+                        </ol>        
+                    </div>
+                </div>
+            </div>
+        </section>        
     </body>
 </html>
