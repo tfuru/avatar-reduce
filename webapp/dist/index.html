@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>avatar-reduce</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    </head>
+    <body>
+        <section class="section">
+            <div class="container">
+                <img src="/static/icon.png">
+                <p><a href="https://vroid.com/mobile">VRoidMobile</a> で作られたVRMを <a href="https://cluster.mu/">cluster</a> 用に変換する非公式Webアプリです</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h2>利用方法</h2>
+                <p>スマートフォンだけで変換できる手順となっています。PCでも利用することができます。</p>
+                <ol>
+                    <li><a href="https://vroid.com/mobile">VRoidMobile</a> でアバターを作成してVRoidHubへアップロードする</li>
+                    <li>VRoidHub へアクセスしてアップロードしたアバターの VRMをダウンロードする</li>
+                    <li>このサイト [VRMファイルを選択] を押して VRMを選択する</li>
+                    <li>[変換] ボタンを押す</li>
+                    <li>しばらく待つと 変換後の cluster 対応 VRMがダウンロードされる</li>
+                    <li><a href="https://cluster.mu/">cluster</a> サイトのアバター画面から cluster 対応 VRM をアップロードする。</li>
+                </ol>
+            </div>
+        </section>        
+        <section class="section">
+            <div class="container">
+                <form action="/api/upload" method="post" enctype="multipart/form-data">
+                    <div class="file">
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="vrm">
+                            <span class="file-cta">
+                                <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">VRMファイルを選択</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="buttons">
+                        <input class="button" type="submit" value="変換">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h2>利用ライブラリ</h2>
+                <ol>
+                    <li>
+                        <p><a href="https://github.com/nkjzm/VReducer">nkjzm/VReducer</a></p>
+                        <p>VRoidStudioでエクスポートされたモデルをClusterアバター用に軽量化する非公式スクリプト</p>
+                    </li>
+                    <li>
+                        <p><a href="https://github.com/tfuru/VReducer">tfuru/VReducer</a></p>
+                        <p>VReducer を VRoidMobile 対応にカスタマイズしたもの</p>
+                    </li>
+                    <li>
+                        <p><a href="https://github.com/tfuru/VReducer">tfuru/VReducer</a></p>
+                        <p>VReducer を VRoidMobile 対応にカスタマイズしたもの</p>
+                    </li>                                       
+                </ol>
+            </div>
+        </section>
+    </body>
+</html>

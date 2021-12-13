@@ -1,1 +1,4 @@
+.git/
+.python-version/
+# webapp/
 lib/

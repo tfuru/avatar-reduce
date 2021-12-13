@@ -1,2 +1,6 @@
-Flask
-# Pillow
+flask
+flask-cors
+datetime
+werkzeug
+logging
+pillow

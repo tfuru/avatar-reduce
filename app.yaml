@@ -1,9 +1,5 @@
-runtime: python27
-api_version: 1
-threadsafe: yes
-handlers:
-- url: /.*
-  script: main.app
-libraries:
-- name: flask
-  version: 0.12
+# entrypoint: python app.py
+env: flex
+
+runtime_config:
+  python_version: 2

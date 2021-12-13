@@ -29,14 +29,6 @@ python -m ensurepip --upgrade
 
 ```
 
-# ビルド
-
-```
-cd work/xxxxx/
-# pip freeze > requirements.txt
-pip install -r requirements.txt -t lib
-```
-
 # デプロイ
 
 ```
@@ -45,9 +37,17 @@ gcloud app deploy --project=avatar-reduce
 gcloud app browse --project=avatar-reduce
 ```
 
-# 利用ライブラリ
-[VReducer](https://github.com/nkjzm/VReducer)
-- 
+# ログ表示
 
-# GAE 参考 記事
-https://datumstudio.jp/blog/gae%E3%81%A7%E3%82%B5%E3%82%AF%E3%83%83%E3%81%A8api%E3%82%B5%E3%83%BC%E3%83%90%E6%A7%8B%E7%AF%89/
+```
+# gcloud app logs tail -s default --project=[PROJECT]
+gcloud app logs tail -s default --project=avatar-reduce
+```
+
+# 利用ライブラリ
+[VReducer](https://github.com/nkjzm/VReducer) 
+
+# 参考 サイト
+[DockerのイメージをGAE/FEにデプロイする][https://qiita.com/wasnot/items/b8691bb4940e6f4a9c24]
+
+[vrm-specification](https://github.com/vrm-c/vrm-specification)
