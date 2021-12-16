@@ -21,7 +21,7 @@ def _ah_health():
     return "ok"
 
 def vreducer(src, dst, fileName):
-    args = ['python', '/env/src/vreducer/vreducer.py', src, '-f', '-e']
+    args = ['python', '/env/src/vreducer/vreducer.py', src, '-f']
     try:
         res = subprocess.check_call(args)
     except:
