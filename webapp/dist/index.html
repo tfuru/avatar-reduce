@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>avatar-reduce - VRoidMobile,VRoidStudio VRMを cluster 向けに変換 #avatar_reduce @t_furu</title>
+        <title>avatar-reduce - VRoidMobile,VRoidStudio VRMを #cluster 向けに変換 #avatar_reduce #VRoid #VRM @t_furu</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link rel="stylesheet" href="/static/index.css">
     </head>
@@ -37,6 +37,17 @@
                                 <input class="button" type="submit" value="変換">
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <h2>注意点</h2>
+                        <ul>
+                            <li>髪の毛メッシュを結合してエクスポートしたモデルを使用してください。</li>
+                            <li>頂点の削減は非対応なので、頂点数を減らしたい場合はVRoidStudio上で調整をお願いします。</li>
+                            <li>ノーマルマップ、スフィアマップは削除されます。</li>
+                            <li>マテリアル結合により基本色、影色が他のマテリアルに結合されるため、一部マテリアルの色が変わる可能性があります。 </li>
+                        </ul>                            
                     </div>
                 </div>
                 <div class="columns">
@@ -87,6 +98,7 @@
                     <div class="column is-three-fifths is-offset-one-fifth">
                         <h2>不具合等</h2>
                         <ol>
+                            <li>2021-12-21 <s>目が光る事を修正</s></li>
                             <li>2021-12-15 <s>VRoid Studio 正式版への一部対応</s></li>
                             <li>2021-12-13 <s>髪型が崩れる</s> / <s>マテリアル数オーバーとなる場合がある</s></li>
                         </ol>
@@ -101,7 +113,7 @@
                         <h2>利用ライブラリ</h2>
                         <ol>
                             <li>
-                                <p><a href="https://github.com/nkjzm/VReducer">nkjzm/VReducer</a></p>
+                                <p><a href="https://github.com/saturday06/VReducer">saturday06/VReducer</a></p>
                                 <p>VRoidStudioでエクスポートされたモデルをClusterアバター用に軽量化する非公式スクリプト</p>
                             </li>
                             <li>
