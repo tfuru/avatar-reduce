@@ -10,3 +10,7 @@ body {
 .file {
     float: left;
 }
+
+.comparison-image {
+    width: 300px;
+}
