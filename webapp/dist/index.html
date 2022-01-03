@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>avatar-reduce - VRoidMobile,VRoidStudio VRMを #cluster 向けに変換 #avatar_reduce #VRoid #VRM @t_furu</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-        <link rel="stylesheet" href="/static/index.css">
+        <link rel="stylesheet" href="/static/index.css?t=1">
+        <script type="text/javascript" src="/static/index.js"></script>
     </head>
     <body>
         <section class="section">
@@ -24,17 +25,18 @@
                         <form action="/api/upload" method="post" enctype="multipart/form-data">
                             <div class="file">
                                 <label class="file-label">
-                                    <input class="file-input" type="file" name="vrm">
+                                    <input class="file-input" type="file" name="vrm" onchange="changeFile( this )">
                                     <span class="file-cta">
                                         <span class="file-icon">
                                         <i class="fas fa-upload"></i>
                                         </span>
                                         <span class="file-label">VRMファイルを選択</span>
                                     </span>
+                                    <span id="file-name" class="file-name">---</span>                                    
                                 </label>
                             </div>
                             <div class="buttons">
-                                <input class="button" type="submit" value="変換">
+                                <input class="button is-fullwidth is-primary" type="submit" value="変換">
                             </div>
                         </form>
                     </div>
