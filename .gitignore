@@ -1,4 +1,5 @@
 .git/
-.python-version/
+.python-version
 # webapp/
 lib/
+src/
