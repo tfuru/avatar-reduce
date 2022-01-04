@@ -3,6 +3,12 @@
 # プロジェクト作成
 Google Cloud Console で 作成する 
 
+```
+gcloud app create --project=avatar-reduce
+
+asia-northeast1
+```
+
 # python 開発環境構築
 M1 macbook の構築例
 ```
@@ -20,20 +26,19 @@ source ~/.zshrc
 
 cd work/xxxxx/
 
-# ローカルに 2.7.18 をインストール
-pyenv install 2.7.18
-pyenv local 2.7.18
+# ローカルに 3.9.2 をインストール
+pyenv install 3.9.2
+pyenv local 3.9.2
+# python -m ensurepip --upgrade
 
-# pip をローカルにインストール
-python -m ensurepip --upgrade
-
+pip install -t lib -r requirements.txt
 ```
 
 # デプロイ
 
 ```
 # gcloud app deploy --project=[PROJECT]
-gcloud app deploy --project=avatar-reduce
+gcloud app deploy --no-cache --project=avatar-reduce
 gcloud app browse --project=avatar-reduce
 ```
 
@@ -42,6 +47,7 @@ gcloud app browse --project=avatar-reduce
 ```
 # gcloud app logs tail -s default --project=[PROJECT]
 gcloud app logs tail -s default --project=avatar-reduce
+gcloud app logs read --project=avatar-reduce
 ```
 
 # 利用ライブラリ

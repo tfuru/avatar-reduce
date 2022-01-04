@@ -1,6 +1,7 @@
-flask
-flask-cors
-datetime
+# Pillow>=9.0
+# Flask==2.0.2
+flask_cors
 werkzeug
-logging
-pillow
+
+# https://github.com/tfuru/VReducer.git@py39-dev
+-e git+https://github.com/tfuru/VReducer.git@py39-dev#egg=vreducer
